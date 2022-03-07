@@ -26,7 +26,8 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".message").textContent = "😐😑"; //
     scoreLeft--;
   } else if (loopGuess === guess) {
-    document.querySelector(".message").textContent = "You idiot 😑💩🐒"; //
+    document.querySelector(".message").textContent = "Hello heeeey  😑💩🐒";
+    scoreLeft--;
   } else if (guess < 0) {
     loopGuess = guess;
     document.querySelector(".message").textContent = "Dude pls dont't"; //
