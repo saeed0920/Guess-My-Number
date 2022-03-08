@@ -70,19 +70,27 @@ document.querySelector(".check").addEventListener("click", function () {
     loopGuess = guess;
     callFunText(messageClass, "🤏 you so close"); //
     scoreLeft--;
-  } else if (guess > hideNumber) {
-    // when player guess to low for hideNmber
-
+  } else if (guess !== hideNumber) {
+    // when now 2 situation : one hight for hideNumber , two low for hideNumber , but now code is so clean
     loopGuess = guess;
-    callFunText(messageClass, "📈 too high "); //
-    scoreLeft--;
-  } else if (guess < hideNumber) {
-    // when player guess to high for hideNmber
+    callFunText(
+      messageClass,
+      guess > hideNumber ? "📈 too high" : "📉 too low"
+    );
 
-    loopGuess = guess;
-    callFunText(messageClass, "📉 too low"); //
     scoreLeft--;
   }
+  // } else if (guess > hideNumber) {
+  //   // when player guess to low for hideNmber
+
+  //   callFunText(messageClass, "📈 too high "); //
+  // } else if (guess < hideNumber) {
+  //   // when player guess to high for hideNmber
+
+  //   loopGuess = guess;
+  //   callFunText(messageClass, "📉 too low"); //
+  //   scoreLeft--;
+  // }
   callFunText(".score", scoreLeft);
 });
 
